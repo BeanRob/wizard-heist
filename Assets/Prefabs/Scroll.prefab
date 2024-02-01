@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 253695723795123818}
   - component: {fileID: -8642617939430517748}
   - component: {fileID: -8941165377924490502}
+  - component: {fileID: 1718346790828942073}
   m_Layer: 0
   m_Name: Scroll
   m_TagString: Scroll
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1718346790828942073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391531942446566799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b743e4b46bc9aab5a94bca1ceba85feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 0}
