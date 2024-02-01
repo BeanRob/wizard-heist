@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     public const string down  = "s";
     public const string right = "d";
 
-    private List<Spell> spells;
-    private Spell equipped;
+    private List<GameObject> spells;
+    private GameObject equipped;
 
     //Multiplier for movespeed
     public const float movespeed = 5;
@@ -44,18 +44,20 @@ public class Player : MonoBehaviour
 
         //On left click, cast the equipped spell
         if (Input.GetMouseButtonDown(0)) {
-            equipped.Cast();
+            equipped.GetComponent<Spell>().Cast();
         }        
     }
 
     private void OnCollisionEnter2D(Collision2D col) {
     }
 
-    public void AddSpell(Spell spell) {
+    public void AddSpell(GameObject spell) {
         Debug.Log(spell);
-        spells.Add(spell);
-        if (spells.Count == 1) {
-            equipped = spell;
-        }
+        GameObject instance = Instantiate(spell, Vector3.zero, Quaternion.identity);
+        equipped = instance;
+        //spells.Add(Instantiate(spell));
+        //if (spells.Count == 1) {
+        //    equipped = spell;
+        //}
     }
 }
